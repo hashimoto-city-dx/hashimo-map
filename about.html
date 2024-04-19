@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Points on a map</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <link rel="stylesheet" href="css/style_menu.css">
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='http://d3js.org/d3.v3.min.js" charset="utf-8'></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #about {
+      position: absolute;
+      top: 60px;
+      width: 90%;
+      margin: 20px;
+    }
+  </style>
+  <header id="global-head">
+    <h1 id="brand-logo">橋本市「Hashi-Mo」加盟店一覧(非公式)</h1>
+    <nav class="nav">
+      <ul class="nav_menu">
+        <li class="nav_menu_item">最新情報は<a
+            href='https://www.city.hashimoto.lg.jp/guide/sogoseisakubu/seisaku_kikaku/dejituka/index.html'
+            target='_blank'>橋本市公式サイト</a>を確認ください</li>
+      </ul>
+    </nav>
+  </header>
+  <div id="nav-toggle">
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <aside id="sidebar">
+    <nav id="global-nav">
+      <ul>
+        <li><a href="./index.html">マップを見る</a></li>
+        <li><a href="https://forms.gle/Ugi8fLFNgFvk8GuM6" target='_blank'>問い合わせ</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    (function ($) {
+      $(function () {
+        $('.sub-menu').on({
+          'mouseenter': function () {
+            $(this).addClass('is-active');
+          },
+          'mouseleave': function () {
+            $(this).removeClass('is-active');
+          }
+        });
+        $('#nav-toggle,#overlay').on('click', function () {
+          $('body').toggleClass('open');
+        });
+      });
+    })(jQuery);
+  </script>
+
+</head>
+
+<body>
+  <!---------ヘッダー---------->
+  <div id="header"></div>
+  <div id='about'>
+    <h2>このページについて</h2>
+    <p>
+      橋本市デジタル地域通貨「Hashi-Mo（ハシモ）」の加盟店をまとめた地図です。<br>
+      このサイトは非公式なサイトです。<br>
+      橋本市の公式情報をもとに情報を収集していますが、最新情報は橋本市公式サイトを確認ください。<br><br>
+      橋本市デジタル地域通貨「Hashi-Mo（ハシモ）」／橋本市
+      <br><a href='https://www.city.hashimoto.lg.jp/guide/sogoseisakubu/seisaku_kikaku/dejituka/index.html'>
+        https://www.city.hashimoto.lg.jp/guide/sogoseisakubu/seisaku_kikaku/dejituka/index.html</a>
+    </p>
+    <p>
+      <br>お問い合わせ、情報の修正依頼などは <a href='https://forms.gle/sJ6gPQtMdtB7steY6' target='_blank'>こちら</a> のフォーム からお問い合わせください。
+    </p>
+  </div>
+</body>
+
+</html>
