@@ -304,3 +304,12 @@ body {
   margin-right: 45px;
   list-style: none; /* リストの[・]を消す */
 }
+
+/* change the style of popup box */
+.mapboxgl-popup-close-button {
+  font-size: 25px;
+}
+
+.mapboxgl-popup-content ul {
+  list-style: none;
+}
