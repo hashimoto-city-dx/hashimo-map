@@ -94,12 +94,18 @@
         // The value for 'accessToken' begins with 'pk...'
         mapboxgl.accessToken =
             'pk.eyJ1IjoiaGFzaGltb3RvZHgiLCJhIjoiY2x1YW9lMDFyMG43dDJub2UwZDlyYXByaSJ9.9gog1H_cjkwU_es-hAFLgg';
+        //表示範囲を近畿地方に限定
+        const bounds = [
+            [134.697327, 33.478876], // Southwest coordinates
+            [136.557434, 35.156655]  // Northeast coordinates
+        ];
         const map = new mapboxgl.Map({
             container: 'map',
             // Replace YOUR_STYLE_URL with your style URL.
             style: 'mapbox://styles/hashimotodx/clv140ww9008v01q117mjcvpv',
             center: [135.6052684, 34.314662], //橋本市役所
-            zoom: 15
+            zoom: 15,
+            maxBounds: bounds // Set the map's geographical boundaries.
         });
 
         // Code from the next step will go here.
