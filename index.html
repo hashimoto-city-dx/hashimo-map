@@ -42,11 +42,14 @@
     <!-- CSS Bootstrap用 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- CSS Mapbox用 -->
+    <!-- JS/CSS Mapbox用 -->
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://d3js.org/d3.v3.min.js" charset="utf-8'></script>
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- JS 自サイト用 -->
+    <!-- セッティング読み出し用JS -->
+    <script src='js/site_setting.js'></script>
     <!-- CSS 自サイト用 -->
     <link rel="stylesheet" href="css/site_customize.css">
 </head>
@@ -91,9 +94,7 @@
     <!-- 地図表示エリア -->
     <div id='map'></div>
     <script>
-        // The value for 'accessToken' begins with 'pk...'
-        mapboxgl.accessToken =
-            'pk.eyJ1IjoiaGFzaGltb3RvZHgiLCJhIjoiY2x1YW9lMDFyMG43dDJub2UwZDlyYXByaSJ9.9gog1H_cjkwU_es-hAFLgg';
+
         //表示範囲を近畿地方に限定
         const bounds = [
             [134.697327, 33.478876], // Southwest coordinates
