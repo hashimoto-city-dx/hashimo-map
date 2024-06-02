@@ -168,7 +168,6 @@
     <script>
         function jumpToLocation(event, latitude, longitude) {
             event.preventDefault(); // デフォルトのリンクの動作を防止
-            // alert(event.target.textContent + 'がクリックされました(' + latitude + ',' + longitude + ')');
             map.flyTo({
                 center: [longitude, latitude],
                 zoom: 15
