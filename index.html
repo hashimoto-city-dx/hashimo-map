@@ -150,6 +150,34 @@
         });
     </script>
 
+    <!-- JumpToLocation 各地域へジャンプするためのボタンエリア -->
+    <div class="scroll-container">
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.314153, 135.604837)">市役所</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.302572, 135.555449)">高野口</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.336201, 135.651773)">あやの台</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.355676, 135.603425)">林間田園都市</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.338326, 135.605750)">御幸辻</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.305942, 135.570227)">伏原</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.329215, 135.648452)">隅田</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.318101, 135.614579)">橋本駅</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.297457, 135.578002)">学文路</a>
+        <a href="#" class="button-jump-to" onclick="jumpToLocation(event,34.257656, 135.651216)">北宿</a>
+    </div>
+
+    <!-- JumpToLocation 各地域へジャンプするためのスクリプト -->
+    <script>
+        function jumpToLocation(event, latitude, longitude) {
+            event.preventDefault(); // デフォルトのリンクの動作を防止
+            // alert(event.target.textContent + 'がクリックされました(' + latitude + ',' + longitude + ')');
+            map.flyTo({
+                center: [longitude, latitude],
+                zoom: 15
+            });
+
+        }
+    </script>
+
+
     <!-- JSライブラリ Boostrap用-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
